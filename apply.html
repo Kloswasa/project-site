@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="KLAUS! apply page">
+        <meta name="keyword" content="KLAUS! Job apply page">
+        <meta name="author" content="Klaus W.">
+        <title>KLAUS! - Apply</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <script src="scripts/apply.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar container flex">
+                <h2 class="logo">KLAUS!</h2>
+
+                <ul class="nav-links flex">
+                <li><a href="index.html" class="theMenu">Index</a></li>
+                <li><a href="about.html" class="theMenu">About</a></li>
+                <li><a href="jobs.html" class="theMenu">Jobs</a></li>
+                <li><a href="apply.html" class="theMenu">Apply</a></li>
+                <li><a href="enhancements.html" class="theMenu">Enhancement</a></li>
+                <li><a href="enhancement2.html" class="theMenu">Enhancement II</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <section class="applypage" id="apply">
+            <h2>Job application form</h2>
+            <h3>Love to see you join our team!</h3>
+            <p>Complete the form below to apply for your desired position. <br> An information will be kept confidential.</p>
+
+
+        <div class="form flex">
+
+            <form id="applicationform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
+            <p><label for="jobrefnumber" class="label">Job reference number</label><br><input type="text"
+            name="jobrefnumber"
+            id="jobrefnumber"
+            required="required"
+            class="input"
+            placeholder="ABCD0"
+            ><br><span id="jobrefnumberError" class="errorMessage"></span></p>
+
+            <p><label for="firstname" class="label">First name: *  </label><br><input type="text"
+            name="firstname"
+            id="firstname"
+            maxlength="20"
+            required="required"
+            class="input"
+            placeholder="Enter your first name."><br><span id="firstnameError" class="errorMessage"></span></p>
+
+            <p><label for="lastname" class="label">Last name: *  </label><br><input type="text"
+            name="lastname"
+            id="lastname"
+            maxlength="20"
+            required="required"
+            class="input"
+            placeholder="Enter your last name."><br><span id="lastnameError" class="errorMessage"></span></p>
+
+            <p><label for="dateofbirth" class="label">Date of birth: *</label><br><input type="text"
+            name="dateofbirth"
+            id="dateofbirth"
+            required="required"
+            class="input"
+            placeholder="(dd/mm/yyyy)"><br><span id="dateofbirthError" class="errorMessage"></span></p>
+
+            <fieldset class="gender" id="gender"><legend>Gender: *  </legend>
+
+                <label for="male"><input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    id="male"
+                    >Male</label>
+                
+                <label for="female"><input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    id="female">Female</label>
+
+            </fieldset>
+            <br><span id="genderError" class="errorMessage"></span>
+
+            <p><label for="staddress" class="label">Street address: *  </label><br><input type="text"
+                name="staddress"
+                id="staddress"
+                maxlength="40"
+                required="required"
+                class="input"
+                placeholder="Enter your street address."><br><span id="staddressError" class="errorMessage"></span></p>
+
+            <p><label for="suburb" class="label">Suburb/ Town: *  </label><br><input type="text"
+                name="suburb"
+                id="suburb"
+                maxlength="40"
+                required="required"
+                class="input"
+                placeholder="Enter your suburb/town."><br><span id="suburbError" class="errorMessage"></span></p>
+
+            <label for="state" class="label">State</label><br>
+            <div class="custom-select"> 
+                <select name="state" id="state">
+                    <option value="none" class="select">Select your state</option>
+                    <option value="VIC" class="state">VIC</option>
+                    <option value="NSW" class="state">NSW</option>
+                    <option value="QLD" class="state">QLD</option>
+                    <option value="NT" class="state">NT</option>
+                    <option value="WA" class="state">WA</option>
+                    <option value="SA" class="state">SA</option>
+                    <option value="TAS" class="state">TAS</option>
+                    <option value="ACT" class="state">ACT</option>
+                </select>
+                <br><span id="stateError" class="errorMessage"></span>
+            </div>
+            
+            <p><label for="postcode" class="label">Postcode: *
+            </label><br><input type="text"
+                name="postcode"
+                id="postcode"
+                required="required"
+                class="input"
+                placeholder="Enter your post code"><br><span id="postcodeError" class="errorMessage"></span></p>
+
+            <p><label for="email" class="label">Email
+            </label><br><input type="email"
+                name="email"
+                id="email"
+                class="input"
+                placeholder="xxxxx@xmail.com"
+                required="required"><br><span id="emailError" class="errorMessage"></span></p>
+
+            <p><label for="phonenumber" class="label">Phone number</label><br>
+                <input type="text"
+                name="phonenumber"
+                id="phonenumber"
+                required="required"
+                class="input"
+                placeholder="Enter your phone number.">
+
+                <br><span id="phonenumberError" class="errorMessage"></span></p>
+            
+            <p><label class="label">Skill list</label><br>
+            <label><input type="checkbox" name="skill[]" value="HTML"  id="html">HTML</label>
+            <label><input type="checkbox" name="skill[]" value="CSS" id="css">CSS</label>
+            <label><input type="checkbox" name="skill[]" value="JavaScript" id="javascript">JavaScript</label>
+            <label><input type="checkbox" name="skill[]" value="Python"  id="python">Python</label>
+            <label><input type="checkbox" name="skill[]" value="Other"  id="other">Other skills</label><br><span id="skillError" class="errorMessage"></span>
+            </p>
+
+            <p><label>Other skills
+                <br><textarea name="otherskills" cols="40" id="otherskills"></textarea>
+            </label></p>
+
+        
+                <p>
+                    <input type="submit" value="Submit" class="btn">
+                    <input type="reset" value="Reset form" class="btn">
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+        
+        <footer class="footer">
+            <p class="ftexts"><strong>&#169; Copyright 2024 KLAUS! - All rights Reserved</strong></p>
+        </footer>
+    </body>
+</html>
